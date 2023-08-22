@@ -1,4 +1,4 @@
-![Caratula del proyecto de calculadora](/CalculadoraConsola/src/assets/portada_challenge.png)
+![Caratula del proyecto de calculadora](/src/assets/CalcoChallenge.png)
 
 
 # 🎮 LandingPage Challenge🎮
