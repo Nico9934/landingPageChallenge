@@ -17,3 +17,6 @@ Forma parte de un challengue para CrisCreativo para poder mostrar mis capacidade
 - CSS
 - TailwindCSS
 - Autoprefixer
+
+## Deploy del proyecto
+https://calcochallenge.netlify.app/
