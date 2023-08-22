@@ -2,7 +2,7 @@
 
 
 # 🎮 LandingPage Challenge🎮
-Una challenge realizado en su totalidad con React, y CSS puro. Se utilizó SASS como preprocesador lo que permite un código más limpio y prolijo con respecto a los estilos, todo dividido por carpetas y con sus respectivos estilos en distintos archivos. Se realizó solo la parte visual, y en este momento me encuentro trabajando en distintas animaciones e interacciones con el usuario.
+Una challenge realizado en su totalidad con React, y CSS puro. El sitio es 100% responsive utilizando las distintas mediaQueries para permitirle al usuario una navegación óptima sin depender el dispositivo con el que navegue. Se utilizó SASS como preprocesador lo que permite un código más limpio y prolijo con respecto a los estilos, todo dividido por carpetas y con sus respectivos estilos en distintos archivos. Se realizó solo la parte visual, y en este momento me encuentro trabajando en distintas animaciones e interacciones con el usuario.
 ####  Project by: Nico Rolon ©️
 
 
