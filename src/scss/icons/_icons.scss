@@ -1,0 +1,19 @@
+@use "../base/variables" as v;
+
+.videoicon__container {
+    margin: auto;
+    position: relative;
+    background-color: #0058e6;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+
+    svg {
+        fill: v.$blanco;
+
+        width: 2rem;
+        height: 2rem;
+        margin: auto;
+    }
+}

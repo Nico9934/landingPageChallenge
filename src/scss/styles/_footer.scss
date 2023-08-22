@@ -1,0 +1,69 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+    padding: 4rem 0rem;
+
+    &__container {
+    }
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include m.desktop {
+            flex-direction: row;
+        }
+    }
+    &__division {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: rgb(100, 100, 100);
+        margin-bottom: 2rem;
+    }
+    &__copyrigth {
+        text-align: center;
+        color: v.$grisClaro;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    &__profileImage {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        object-fit: contain;
+        margin: auto;
+        margin-bottom: 3rem;
+        margin-top: 1.5rem;
+    }
+}
+.col {
+    font-family: v.$fuente_terciaria;
+    font-size: 1rem;
+    color: v.$negro;
+    line-height: 2.5rem;
+    @include m.desktop {
+        text-align: center;
+    }
+    li {
+        list-style: none;
+    }
+    &__title {
+        font-weight: 900;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    &__list {
+        margin-bottom: 2rem;
+    }
+}

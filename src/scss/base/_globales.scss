@@ -1,0 +1,38 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    // font-family: v.$fuente_principal;
+    font-size: 0.8rem;
+}
+main {
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include m.tablet {
+        padding: 0 1rem;
+    }
+    @include m.desktop {
+        padding: 0 10rem;
+    }
+}

@@ -1,0 +1,48 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.perfil {
+    background-color: #1a1f2b;
+    padding: 8rem 0rem;
+    &__container {
+        @include m.desktop {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+    }
+    &__text {
+        @include m.desktop {
+            width: 50%;
+        }
+    }
+    &__title {
+        font-family: v.$fuente_principal;
+        color: v.$blanco;
+        font-weight: bold;
+        font-size: 2.2rem;
+        line-height: 3rem;
+        margin-bottom: 3rem;
+        @include m.desktop {
+            margin-top: 3rem;
+        }
+    }
+    &__description {
+        font-family: v.$fuente_secundaria;
+        text-align: start;
+        font-size: 1rem;
+        margin-bottom: 6rem;
+        color: #9e9fa2;
+
+        @include m.desktop {
+            font-size: 1.1rem;
+        }
+    }
+    &__img {
+        border-radius: 1rem;
+        @include m.desktop {
+            height: 30rem;
+            width: 30rem;
+        }
+    }
+}

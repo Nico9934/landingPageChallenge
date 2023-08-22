@@ -1,0 +1,92 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.news {
+    background-color: v.$azulOscuro;
+    padding: 3rem 0rem;
+    @include m.tablet {
+        padding: 8rem 0;
+    }
+
+    &__title {
+        font-family: v.$fuente_principal;
+        font-weight: bold;
+        color: v.$blanco;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+    }
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease-in;
+        @include m.tablet {
+            flex-direction: row;
+        }
+        .new:nth-child(2) {
+            background-color: v.$blanco;
+            h4 {
+                color: v.$negro;
+            }
+        }
+
+        .new:nth-child(odd) {
+            &:hover {
+                h4 {
+                    color: v.$negro;
+                }
+                // }
+            }
+        }
+    }
+}
+
+.new {
+    background-color: v.$azulOscuro;
+    height: 30rem;
+    text-align: center;
+    padding: 3rem 2.5rem;
+    color: v.$blanco;
+    transition: all 0.4s ease-in;
+    &:hover {
+        background-color: v.$blanco;
+    }
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        background-color: v.$naranja;
+        border-radius: 50%;
+        transition: all 0.1s ease-in;
+
+        &:hover {
+            background-color: v.$blanco;
+            svg {
+                fill: v.$grisClaro;
+            }
+        }
+        svg {
+            transition: all 0.1 ease-in;
+            fill: v.$blanco;
+        }
+    }
+    &__title {
+        color: v.$blanco;
+        font-family: v.$fuente_principal;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    &__description {
+        font-family: v.$fuente_secundaria;
+        font-size: 1rem;
+        color: v.$grisClaro;
+    }
+}

@@ -1,0 +1,17 @@
+@use "../base/variables" as v;
+
+.question {
+    padding: 4rem 0rem;
+    &__container {
+    }
+    &__title {
+        text-align: center;
+        font-size: 2.2rem;
+
+        text-transform: uppercase;
+        font-family: v.$fuente_principal;
+        font-weight: 900;
+        line-height: 2.3rem;
+        color: v.$negro;
+    }
+}

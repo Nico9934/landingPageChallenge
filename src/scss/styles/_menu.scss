@@ -1,0 +1,55 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+
+    &__container {
+        background-color: #000000;
+        width: 20%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        align-content: center;
+        padding: 3rem;
+    }
+    &__close {
+        margin-bottom: 3rem;
+        text-align: end;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0px;
+        position: relative;
+        fill: v.$blanco;
+        color: v.$blanco;
+        margin-right: 0rem;
+        transition: all 0.2s ease-in;
+        &:hover {
+            cursor: pointer;
+            fill: #2954e4;
+            color: #2954e4;
+        }
+    }
+    &__ul {
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+
+        // justify-content: space-around;
+    }
+    &__link {
+        display: inline-block;
+        color: v.$grisFondo;
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        transition: all 0.2s ease-in;
+        &:hover {
+            cursor: pointer;
+            color: #2954e4;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.chat {
+    background-image: url("https://criscreatyvo.ar/wp-content/uploads/2023/07/Shapes-Hero-Banner-Jim-Fahad-Digital.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #1a1f2b;
+
+    @include m.desktop {
+        padding: 5rem 0;
+    }
+    &__container {
+        padding: 4rem 0rem;
+        @include m.desktop {
+            display: flex;
+            gap: 5rem;
+        }
+    }
+    &__text {
+        @include m.desktop {
+            width: 40%;
+        }
+    }
+    &__title {
+        text-align: start;
+        font-size: 2.2rem;
+        font-family: v.$fuente_principal;
+        font-weight: 900;
+        line-height: 2.3rem;
+        color: v.$blanco;
+        margin-bottom: 2rem;
+    }
+    &__description {
+        font-family: v.$fuente_secundaria;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: v.$blanco;
+    }
+    &__button {
+        display: flex;
+        width: 15rem;
+        font-family: v.$fuente_terciaria;
+        background-color: #61ce70;
+        padding: 1rem 1rem;
+        border-radius: 0.5rem;
+        color: v.$blanco;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        box-shadow: 1px 1px 40px -4px rgba(0, 0, 0, 0.75);
+        transition: all 0.5s ease;
+        margin-bottom: 3rem;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-0.5rem);
+        }
+    }
+    &__numbers {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+    }
+    &__number {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: v.$fuente_secundaria;
+    }
+    &__quantity {
+        color: v.$naranja;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    &__quality {
+        color: v.$blanco;
+        font-size: 1rem;
+    }
+    &__video {
+        @include m.desktop {
+            width: 35rem;
+            margin: auto;
+        }
+    }
+}

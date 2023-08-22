@@ -1,0 +1,107 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.budget {
+    &__container {
+        padding: 3rem 0rem;
+        display: flex;
+        flex-direction: column;
+        @include m.desktop {
+            flex-direction: row;
+        }
+    }
+    &__text {
+        @include m.desktop {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+    }
+    &__title {
+        font-family: v.$fuente_principal;
+        font-weight: bold;
+        font-size: 3.1rem;
+        line-height: 3rem;
+        margin-bottom: 3rem;
+        @include m.desktop {
+            padding: 2rem 0rem;
+            margin-bottom: 0rem;
+        }
+    }
+    &__description {
+        font-family: v.$fuente_secundaria;
+        font-size: 1rem;
+        margin-bottom: 3rem;
+        color: v.$grisClaro;
+        span {
+            color: v.$naranja;
+        }
+        @include m.desktop {
+            margin-bottom: 0rem;
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #000;
+        padding: 0.9rem 40px;
+        border-radius: 5rem;
+        margin: auto;
+        color: v.$blanco;
+        font-weight: 600;
+        font-size: 18px;
+        transition: all 0.5s ease;
+        svg {
+            fill: v.$blanco;
+        }
+        @include m.desktop {
+            margin-left: 0px;
+        }
+
+        &:hover {
+            svg {
+                fill: v.$naranja;
+            }
+            color: v.$naranja;
+            transform: translateY(-1.5rem);
+        }
+    }
+    &__target {
+        margin: 3rem auto;
+        background-color: #3edd6b;
+        border-radius: 2rem;
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+        @include m.desktop {
+            height: 20rem;
+            width: 20rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+            font-family: v.$fuente_terciaria;
+            font-weight: bold;
+            line-height: 2rem;
+            color: v.$negro;
+            @include m.desktop {
+                line-height: 2.6rem;
+            }
+        }
+        p {
+            font-family: v.$fuente_secundaria;
+            font-weight: bold;
+            font-size: 2rem;
+            text-transform: uppercase;
+            line-height: 2rem;
+            @include m.desktop {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}

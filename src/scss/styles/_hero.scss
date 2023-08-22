@@ -1,0 +1,159 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.hero {
+    background-image: url("https://criscreatyvo.ar/wp-content/uploads/2023/07/Shapes-Hero-Banner-Jim-Fahad-Digital.webp");
+    background-repeat: no-repeat;
+
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+
+    &__contain {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include m.tablet {
+            flex-direction: row;
+        }
+    }
+    &__text {
+        width: 65vw;
+    }
+    &__title {
+        font-family: v.$fuente_principal;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        margin-bottom: 3rem;
+        @include m.desktop {
+            font-size: 4.75rem;
+            line-height: 6rem;
+        }
+    }
+    &__description {
+        font-family: v.$fuente_secundaria;
+        font-size: 1.1rem;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-bottom: 3rem;
+    }
+    &__description__text {
+        text-align: start;
+
+        &__first {
+            color: v.$grisClaro;
+        }
+
+        &__second,
+        &__third {
+            color: v.$negro;
+            font-weight: bold;
+        }
+        &__four {
+            color: v.$grisClaro;
+            font-weight: bold;
+        }
+
+        span {
+            color: v.$rojo;
+        }
+    }
+    &__buttons {
+        width: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+
+        @include m.tablet {
+            margin-bottom: 5rem;
+        }
+        input {
+            width: 14rem;
+            padding: 0.8rem 1.5rem;
+            background-color: v.$negro;
+            color: v.$rosa;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            &:hover {
+                cursor: pointer;
+                color: rgb(209, 105, 216);
+                transform: scale(1.05);
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+    &__checkicon {
+        width: 5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    &__clients {
+        max-width: 24rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        @include m.tablet {
+            margin-bottom: 5rem;
+        }
+    }
+    &__clients__img {
+        width: 50%;
+    }
+    &__clients__description {
+        width: 70%;
+        color: v.$grisClaro;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+
+        span {
+            font-weight: normal;
+        }
+    }
+    &__animation {
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            justify-content: space-around;
+            width: 50vw;
+        }
+        img {
+            @include m.tablet {
+                margin-top: -10rem;
+                object-fit: contain;
+            }
+        }
+    }
+    &__videoIcon {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        width: 100%;
+        @include m.desktop {
+            margin-top: -20rem;
+        }
+    }
+    &__videoIcon__text {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
