@@ -24,7 +24,9 @@
         }
     }
     &__text {
-        width: 65vw;
+        @include m.desktop {
+            width: 65vw;
+        }
     }
     &__title {
         font-family: v.$fuente_principal;
